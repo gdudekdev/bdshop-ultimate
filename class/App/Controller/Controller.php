@@ -9,3 +9,4 @@ class Controller extends \Core\Controller\Controller
             $this->viewPath = ROOT . '/view/';
       }
 }
+      

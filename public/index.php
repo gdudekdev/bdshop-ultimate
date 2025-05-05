@@ -1,6 +1,5 @@
 <?php
 require '../class/App/App.php';
-
 \App\App::init();
 
 $page = 'home';
@@ -10,13 +9,12 @@ if (!empty($_GET['page'])) {
 }
 
 if ($page == 'home') {
-
 } else if ($page == 'listing') {
-
-} else if ($page == 'detail') {
-
-}else{
+      $controller = new \App\Controller\Product();
+      $controller->listing();
+} else if ($page == 'detail' && !empty($_GET['id'])) {
+      $controller = new \App\Controller\Product();
+      $controller->detail($_GET['id']);
+} else {
       http_response_code(404);
 }
-
-var_dump(ROOT);
