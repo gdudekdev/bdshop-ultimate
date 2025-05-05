@@ -1,0 +1,22 @@
+<?php
+require '../class/App/App.php';
+
+\App\App::init();
+
+$page = 'home';
+
+if (!empty($_GET['page'])) {
+      $page = $_GET['page'];
+}
+
+if ($page == 'home') {
+
+} else if ($page == 'listing') {
+
+} else if ($page == 'detail') {
+
+}else{
+      http_response_code(404);
+}
+
+var_dump(ROOT);
