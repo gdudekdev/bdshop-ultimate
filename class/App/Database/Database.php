@@ -4,6 +4,7 @@ namespace App\Database;
 
 use PDO;
 
+
 class Database extends \Core\Database\Database
 {
       public function connect()

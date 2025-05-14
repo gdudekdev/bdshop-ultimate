@@ -21,10 +21,10 @@ class Database
       }
       public function fetch(string $sql, array $bound = [])
       {
-            $this->execute($sql, $bound, false);
+            return $this->execute($sql, $bound, false);
       }
       public function fetchAll(string $sql, $bound = false)
       {
-            $this->execute($sql, $bound, true);
+            return $this->execute($sql, $bound, true);
       }
 }
